@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Regalo Virtual ❤️</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="brand">Un regalo para ti 💌</h1>
+      <nav class="menu">
+        <button data-target="carta" class="menu-btn active">Carta</button>
+        <button data-target="playlist" class="menu-btn">Playlist</button>
+        <button data-target="collage" class="menu-btn">Collage</button>
+        <button data-target="pregunta" class="menu-btn">¿Quieres ser mi novio?</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- CARTA -->
+      <section id="carta" class="panel visible" aria-labelledby="Carta">
+        <div class="card carta">
+          <h2 class="letter-title">Para ti...</h2>
+          <p class="letter-body">
+            Hola cariño, este es un pequeño regalo virtual hecho con mucho cariño. 
+            Quise juntar palabras, canciones y fotos para decirte lo especial que eres.
+          </p>
+          <p class="letter-body cursive">Con cariño, <br><strong>FEDE</strong></p>
+        </div>
+      </section>
+
+      <!-- PLAYLIST -->
+      <section id="playlist" class="panel">
+        <div class="card playlist">
+          <h2>Mi playlist para ti</h2>
+          <div class="player">
+            <audio id="audio" controls preload="none">
+              <!-- Si no pones archivos locales, reemplaza src por tus URLs o añade archivos en audio/ -->
+              <source id="audioSource" src="audio/intro.mp3" type="audio/mpeg">
+              Tu navegador no soporta audio.
+            </audio>
+
+            <div class="track-list" id="trackList">
+              <!-- Las pistas se inyectan por JS -->
+            </div>
+
+            <div class="controls">
+              <button id="prevBtn">◀︎</button>
+              <button id="playBtn">▶︎</button>
+              <button id="nextBtn">▶︎▶︎</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COLLAGE -->
+      <section id="collage" class="panel">
+        <div class="card collage">
+          <h2>Collage de fotos</h2>
+          <div class="grid" id="photoGrid">
+            <!-- Pega tus <img> aquí o deja que JS los genere -->
+            <img src="images/perrito 10.png" alt="Foto 1">
+            <img src="images/perrito5.png" alt="Foto 2">
+            <img src="images/perrito7.png" alt="Foto 3">
+            <img src="images/perrito8.png" alt="Foto 4">
+          </div>
+        </div>
+      </section>
+
+      <!-- PREGUNTA -->
+      <section id="pregunta" class="panel">
+        <div class="card pregunta">
+          <h2>¿Quieres ser mi novio?</h2>
+          <p>¿Aceptarías ser mi pareja? 💫</p>
+          <div class="question-btns">
+            <button id="siBtn" class="btn-yes">Sí 💖</button>
+            <button id="noBtn" class="btn-no">No 😅</button>
+          </div>
+          <div id="respuesta" class="respuesta"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>Hecho con ♥ — Regalo Virtual</small>
+    </footer>
+  </div>
+
+  <!-- Modal para imagen grande -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeLightbox" class="close">✕</button>
+    <img id="lightboxImg" src="" alt="Foto ampliada">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
