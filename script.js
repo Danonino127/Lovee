@@ -99,7 +99,7 @@ siBtn.addEventListener('click', () => {
 })
 
 noBtn.addEventListener('click', () => {
-  respuesta.textContent = "Oh... ¿En serio? 😅 Aún así gracias por abrir el regalo."
+  respuesta.textContent = "Oh... ¿En serio? 😅."
   localStorage.setItem('respuestaRegalo','no')
   shakeElement(noBtn)
 })
